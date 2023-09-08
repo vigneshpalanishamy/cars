@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>cars</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 67vh; 
+        }
+        h1 {
+            color: rgb(248, 41, 33);
+            text-align: center;
+        }
+        a {
+            color: rgb(35, 54, 230);
+            position: absolute;
+            top: 82vh; 
+            right: 20vh; 
+        }
+        #list  
+        {
+            color: rgba(226, 102, 30, 0.897);
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: auto; 
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #car-image {
+        
+            width: 200px;
+            height: 150px;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 0px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Incredible cars</h1>
+    <a href="incredible-cars2.html">check me for more info</a>
+    <div class="video-container">
+        <iframe width="900" height="415" src="https://www.youtube.com/embed/bAZQnyFPKBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <table>
+        <h1 id="list">List of Incredible Car models</h1>
+    
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Car models</th>
+                <th>color</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mustang GT</td>
+                <td>red</td>
+                <td>$44,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mustang Eco boost</td>
+                <td>Yellow</td>
+                <td>$38,456</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Mustang dark horse</td>
+                <td>Black</td>
+                <td>$60,930</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <img id="car-image" src="car-stop.jpg" alt="Car Image">
+
+        <button onclick="startMoving()">Run</button>
+        <button onclick="stopMoving()">Stop</button>
+    </div>
+
+    <script>
+        var carImage = document.getElementById("car-image");
+        var isMoving = false;
+
+        function startMoving() {
+            isMoving = true;
+            carImage.src = "car-moving.gif";
+        }
+
+        function stopMoving() {
+            isMoving = false;
+            carImage.src = "car-stop.jpg";
+        }
+    </script>
+</body>
+</html>
